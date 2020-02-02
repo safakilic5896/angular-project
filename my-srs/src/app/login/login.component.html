@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+    <div class="container-image">
+        <img class="img" src="../../assets/images/logo-Univ.png" alt="logo-Univ" width="150" height="150">
+    </div>
+    <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="loginForm">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Username" formControlName="username" [(ngModel)]="username" name="username" required>
+                        </mat-form-field>
+                        <div *ngIf="submitted && f.username.errors" [ngClass]=" submitted && f.username.errors ? 'invalid-feedback' : 'valid-feedback'">
+                            <div *ngIf="f.username.errors.required">User Name is required</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Password" formControlName="password" [(ngModel)]="password" type="password" name="password" required>
+                        </mat-form-field>
+                        <div *ngIf="submitted && f.password.errors" [ngClass]=" submitted && f.password.errors ? 'invalid-feedback' : 'valid-feedback'">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="login()" color="primary">Login</button>
+        <a mat-button routerLink="." color="primary" (click)="register()">Register</a>
+    </mat-card-actions>
+</mat-card>

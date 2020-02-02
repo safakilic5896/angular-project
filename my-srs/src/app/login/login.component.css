@@ -1,0 +1,40 @@
+.example-card {
+    width: 50%;
+    margin: auto;
+}
+
+.container-image {
+    border-bottom: solid 2px rgba(0, 0, 0, .125);
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.mat-card-header-text {
+    margin-left: 46%;
+}
+
+.example-form {
+    margin-left: 39%;
+    margin-right: 50%;
+}
+
+.mat-card-actions {
+    padding-left: 40%;
+}
+
+.mat-card-header {
+    padding-left: 44%;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.valid-feedback {
+    display: none;
+}

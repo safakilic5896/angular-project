@@ -1,0 +1,10 @@
+<h1>Bienvenue dans votre espace</h1>
+<h2>Cet espace vous permet de téléchargé les documents partagés par votre Professeur</h2>
+<br>
+<br>
+<br>
+<div class="list-group">
+    <a class="list-group-item list-group-item-action active">
+        Liste des Cours Partagés
+    </a>
+    <a *ngFor="let item of files; let i = index" class="list-group-item list-group-item-action" href='http://localhost:8080/file/{{item}}'>{{item}}</a>

@@ -1,0 +1,13 @@
+<h1>Bienvenue dans votre espace</h1>
+<h2>Cet espace vous permet de partager des documents avec vos élèves</h2>
+<br>
+<input type="file" id="customFile" (change)="selectFile($event)">
+<button class="btn btn-primary" [disabled]="!selectedFiles || admincheck || status" (click)="upload()">Sauvegarde</button>
+<button class="btn btn-primary" style="margin-left: 10px" (click)="downloadFile()">Voir le fichier</button>
+<br>
+<br>
+<div class="list-group">
+    <a class="list-group-item list-group-item-action active">
+        Liste des Cours Partagés avec vos élèves
+    </a>
+    <a *ngFor="let item of files; let i = index" class="list-group-item list-group-item-action" href='http://localhost:8080/file/{{item}}'>{{item}}</a>
